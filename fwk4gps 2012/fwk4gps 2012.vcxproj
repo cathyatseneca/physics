@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{17748980-F43B-4CB5-BEB6-74DDE77B97BC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>fwk4gps2012</RootNamespace>
+    <ProjectName>physics</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)INCLUDE;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)LIB\X86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;d3d9.lib;d3dx9.lib;dinput8.lib;dsound.lib;x3daudio.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Common_Symbols.h" />
+    <ClInclude Include="APIBase.h" />
+    <ClInclude Include="APIUserInput.h" />
+    <ClInclude Include="APIGraphic.h" />
+    <ClInclude Include="APILight.h" />
+    <ClInclude Include="APISound.h" />
+    <ClInclude Include="APIText.h" />
+    <ClInclude Include="APITexture.h" />
+    <ClInclude Include="APIVertex.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Coordinator.h" />
+    <ClInclude Include="Base.h" />
+    <ClInclude Include="Design.h" />
+    <ClInclude Include="DialogResource.h" />
+    <ClInclude Include="GeneralConstants.h" />
+    <ClInclude Include="iAPIBase.h" />
+    <ClInclude Include="iBase.h" />
+    <ClInclude Include="iphysics.h" />
+    <ClInclude Include="Mappings.h" />
+    <ClInclude Include="physics.h" />
+    <ClInclude Include="Translation.h" />
+    <ClInclude Include="APIPlatformSettings.h" />
+    <ClInclude Include="APIDisplay.h" />
+    <ClInclude Include="Frame.h" />
+    <ClInclude Include="Graphic.h" />
+    <ClInclude Include="HUD.h" />
+    <ClInclude Include="iAPIUserInput.h" />
+    <ClInclude Include="iAPIGraphic.h" />
+    <ClInclude Include="iAPILight.h" />
+    <ClInclude Include="iAPISound.h" />
+    <ClInclude Include="iAPIText.h" />
+    <ClInclude Include="iAPITexture.h" />
+    <ClInclude Include="iCamera.h" />
+    <ClInclude Include="iCoordinator.h" />
+    <ClInclude Include="iAPIDisplay.h" />
+    <ClInclude Include="iFrame.h" />
+    <ClInclude Include="iGraphic.h" />
+    <ClInclude Include="iHUD.h" />
+    <ClInclude Include="iAPIInputDevice.h" />
+    <ClInclude Include="iLight.h" />
+    <ClInclude Include="APIInputDevice.h" />
+    <ClInclude Include="iObject.h" />
+    <ClInclude Include="iSound.h" />
+    <ClInclude Include="iAPIAudio.h" />
+    <ClInclude Include="iText.h" />
+    <ClInclude Include="iTexture.h" />
+    <ClInclude Include="iUtilities.h" />
+    <ClInclude Include="iAPIWindow.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="MathDeclarations.h" />
+    <ClInclude Include="MathDefinitions.h" />
+    <ClInclude Include="ModellingLayer.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Sound.h" />
+    <ClInclude Include="APIAudio.h" />
+    <ClInclude Include="Text.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="APIWindow.h" />
+    <ClInclude Include="VertexList.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="APIBase.cpp" />
+    <ClCompile Include="APIUserInput.cpp" />
+    <ClCompile Include="APIGraphic.cpp" />
+    <ClCompile Include="APILight.cpp" />
+    <ClCompile Include="APISound.cpp" />
+    <ClCompile Include="APIText.cpp" />
+    <ClCompile Include="APITexture.cpp" />
+    <ClCompile Include="Base.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Coordinator.cpp" />
+    <ClCompile Include="Design.cpp" />
+    <ClCompile Include="APIDisplay.cpp" />
+    <ClCompile Include="Entry.cpp" />
+    <ClCompile Include="Frame.cpp" />
+    <ClCompile Include="Graphic.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="APIInputDevice.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="physics.cpp" />
+    <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="APIAudio.cpp" />
+    <ClCompile Include="Text.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Utilities.cpp" />
+    <ClCompile Include="APIWindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Dialog.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

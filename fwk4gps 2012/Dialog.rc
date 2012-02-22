@@ -1,0 +1,69 @@
+/* Resource Definition Script for the Dialog Dialog Box
+ *
+ * Dialog.rc
+ * fwk4gps version 3.0
+ * gam666/dps901/gam670/dps905
+ * January 14 2012
+ * copyright (c) 2012 Chris Szalwinski 
+ * distributed under TPL - see ../Licenses.txt
+ */
+
+#include <afxres.h>
+#include "DialogResource.h" // for IDC_*, IDD_DLG
+#include "Translation.h"    // for COPYRIGHT_LINE_*
+
+// Dialog Box Template for IDD_DLG
+//
+IDD_DLG DIALOGEX 200, 100, 310, 280
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION WND_CAPTION
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+  LTEXT          "Display Device", IDC_STATIC, 10, 5, 50, 10
+  COMBOBOX       IDC_DIS, 10, 15, 180, 64, 
+                 CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+  LTEXT          "Resolution", IDC_STATIC, 10, 35, 50, 10
+  COMBOBOX       IDC_RES, 10, 45, 180, 50, 
+                 CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+  LTEXT          "Action", IDC_STATIC, 10, 65, 55, 10
+  COMBOBOX       IDC_ACT, 10, 75, 125, 66, 
+                 CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+  LTEXT          "Key Press", IDC_STATIC, 138, 65, 52, 10
+  COMBOBOX       IDC_KEY, 138, 75, 52, 127, 
+                 CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+  LTEXT          "Pointer Object", IDC_STATIC, 193, 65, 52, 10
+  COMBOBOX       IDC_PTO, 193, 75, 52, 127, 
+                 CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+  LTEXT          "Controller Object", IDC_STATIC, 248, 65, 52, 10
+  COMBOBOX       IDC_CTO, 248, 75, 52, 127, 
+                 CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+  LTEXT          "Sound", IDC_STATIC, 10, 95, 55, 10
+  COMBOBOX       IDC_AUD,10,105,55,66, 
+                 CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+  LTEXT          "Sound File", IDC_STATIC, 68, 95, 112, 10
+  COMBOBOX       IDC_SFL, 68, 105, 122, 127, 
+                 CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+  LTEXT          "Controller", IDC_STATIC, 10, 125, 50, 10
+  COMBOBOX       IDC_CNT,10,135,180,50, 
+                 CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+  LTEXT          "Trigger", IDC_STATIC, 10, 155, 50, 10
+  COMBOBOX       IDC_TRG, 10, 165, 180, 50, 
+                 CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+  CONTROL        "Reverse Y Axis", IDC_YRV, "Button", 
+                 BS_AUTOCHECKBOX | WS_TABSTOP, 10, 185, 65, 10
+  CONTROL        "Use Z Axis (if available)", IDC_ZON, "Button", 
+                 BS_AUTOCHECKBOX | WS_TABSTOP, 85, 185, 100, 10
+
+  DEFPUSHBUTTON  "Go",     IDC_GO,    40, 205, 50, 15, WS_DISABLED
+  PUSHBUTTON     "Cancel", IDCANCEL, 210, 205, 50, 15
+
+  LTEXT          COPYRIGHT_LINE_1, // DO NOT REMOVE WITHOUT WRITTEN PERMISSION           
+                 IDC_STATIC, 8, 230, 300, 10
+  LTEXT          COPYRIGHT_LINE_2, // DO NOT REMOVE WITHOUT WRITTEN PERMISSION
+                 IDC_STATIC, 8, 240, 300, 10  
+  LTEXT          COPYRIGHT_LINE_3, // DO NOT REMOVE WITHOUT WRITTEN PERMISSION
+                 IDC_STATIC, 8, 252, 300, 10   
+  LTEXT          COPYRIGHT_LINE_4, // DO NOT REMOVE WITHOUT WRITTEN PERMISSION
+                 IDC_STATIC, 8, 262, 200, 10
+                 // Insert other credits here, expand dialog box depth to suit
+END
