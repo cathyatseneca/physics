@@ -26,7 +26,7 @@ LRESULT CALLBACK wndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp);
 #define WND_STYLE     WS_POPUP
 #define WND_EXSTYLE   WS_EX_TOPMOST
 // units of time per sec returned by operating system
-#define UNITS_PER_SEC 1000
+//#define UNITS_PER_SEC 1000
 
 //------------------------------ APIWindow ---------------------------------------
 //

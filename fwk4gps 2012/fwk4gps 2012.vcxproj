@@ -78,6 +78,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="COBB.h" />
+    <ClInclude Include="CollisionGeometry.h" />
+    <ClInclude Include="CollisionTests.h" />
     <ClInclude Include="Common_Symbols.h" />
     <ClInclude Include="APIBase.h" />
     <ClInclude Include="APIUserInput.h" />
@@ -90,14 +93,25 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Coordinator.h" />
     <ClInclude Include="Base.h" />
+    <ClInclude Include="CSphere.h" />
     <ClInclude Include="Design.h" />
     <ClInclude Include="DialogResource.h" />
     <ClInclude Include="GeneralConstants.h" />
     <ClInclude Include="iAPIBase.h" />
     <ClInclude Include="iBase.h" />
+    <ClInclude Include="iCOBB.h" />
+    <ClInclude Include="iCollision.h" />
+    <ClInclude Include="iCollisionGeometry.h" />
+    <ClInclude Include="iCollisionListener.h" />
+    <ClInclude Include="iCollisionSpace.h" />
+    <ClInclude Include="iCSphere.h" />
     <ClInclude Include="iphysics.h" />
+    <ClInclude Include="iSimpleCollisionSpace.h" />
     <ClInclude Include="Mappings.h" />
+    <ClInclude Include="ModelSettings.h" />
     <ClInclude Include="physics.h" />
+    <ClInclude Include="SimpleCollisionSpace.h" />
+    <ClInclude Include="tlist.h" />
     <ClInclude Include="Translation.h" />
     <ClInclude Include="APIPlatformSettings.h" />
     <ClInclude Include="APIDisplay.h" />
@@ -148,7 +162,11 @@
     <ClCompile Include="APITexture.cpp" />
     <ClCompile Include="Base.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="COBB.cpp" />
+    <ClCompile Include="CollisionGeometry.cpp" />
+    <ClCompile Include="CollisionTests.cpp" />
     <ClCompile Include="Coordinator.cpp" />
+    <ClCompile Include="CSphere.cpp" />
     <ClCompile Include="Design.cpp" />
     <ClCompile Include="APIDisplay.cpp" />
     <ClCompile Include="Entry.cpp" />
@@ -159,6 +177,7 @@
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="physics.cpp" />
+    <ClCompile Include="SimpleCollisionSpace.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="APIAudio.cpp" />
     <ClCompile Include="Text.cpp" />

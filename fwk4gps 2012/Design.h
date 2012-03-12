@@ -12,7 +12,9 @@
  */
 
 #include "Coordinator.h" // for the Coordinator class definition
-#include "iphysics.h"     
+#include "iphysics.h"
+#include "iCollisionSpace.h"
+#include "tlist.h"
 //-------------------------------- Design -------------------------------------
 //
 // The Design class defines the structure of the game design
@@ -21,10 +23,22 @@ class iObject;
 class iLight;
 class iSound;
 class iHUD;
-
+const int MAX_CANNONBALLS=100;
+const Colour red(1,0,0);
+const Colour green(0,1,0);
+const Colour blue(0,0,1);
+const Colour white(0,0,0);
 class Design : public Coordinator {
-	iPhysics* abox;
-	iPhysics* anotherbox;
+    iPhysics* cannon_;
+	TList<iPhysics*> flyinglist_;
+	iPhysics* cannonball_;
+	bool isFlying_[MAX_CANNONBALLS];
+	iPhysics* platform_;
+	int numCannonballs_;
+	iPhysics* bigGreenBox_;
+	iPhysics* bigBlueBox_;
+	int lastfired_;                //time last time something was fired
+	iCollisionSpace* cs_;
 
 	iSound*   background;          // points to the background sound
 	iSound*   discrete;            // points to the discrete sound

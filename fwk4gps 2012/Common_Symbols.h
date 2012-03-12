@@ -49,120 +49,45 @@ typedef enum LightType {
 //
 // enumeration constants
 typedef enum Action {
-    MDL_PLUS_X,
-    MDL_MINUS_X,
-    MDL_PLUS_Y,
-    MDL_MINUS_Y,
-    MDL_PLUS_Z,
-    MDL_MINUS_Z,
-    MDL_ROLL_BOXES,
-	MDL_SPIN_LEFT,
-	MDL_SPIN_TOP,
-    MDL_SPIN_SPOT_P,
-    MDL_SPIN_SPOT_N,
-    MDL_NEW_OBJECT,
-    MDL_NEW_SOUND,
-    MDL_NEW_LIGHT,
-    MDL_DET_CHILD,
-    MDL_ATT_CHILD,
-	CAM_PITCH_UP,
-	CAM_PITCH_DOWN,
-	CAM_YAW_LEFT,
-	CAM_YAW_RIGHT,
-	CAM_ADVANCE,
-	CAM_RETREAT,
-    CAM_ROLL_LEFT,
-    CAM_ROLL_RIGHT,
-    CAM_STRAFE_LEFT,
-    CAM_STRAFE_RIGHT,
-    CAM_STRAFE_LEFT_ALT,
-    CAM_STRAFE_RIGHT_ALT,
-    CAM_FLY_UP,
-    CAM_FLY_DOWN,
-	AUD_BKGRD,
-	AUD_IMPLS,
+	FIRE_CANNONBALL,				//space
+	CANNON_ROTATE_LEFT,				//A
+	CANNON_ROTATE_RIGHT,			//D
+	CANNON_ROTATE_BACK,				//S
+	CANNON_ROTATE_FWD,				//W
+	CLOCKWISE_MOMENT,				//Q
+	COUNTERCLOCKWISE_MOMENT,		//E
 	AUD_VOLUME_INC,
 	AUD_VOLUME_DEC,
-	AUD_FREQ_INC,
-	AUD_FREQ_DEC,
-	LIGHT_POINT,
-	LIGHT_SPOT,
-	LIGHT_DISTANT,
-    LIGHT_CLONE,
+	AUD_SPEED_UP,
+	AUD_SLOW_DOWN,
 	HUD_DISPLAY,
 	HUD_LEFT,
 	HUD_RIGHT,
 	HUD_UP,
 	HUD_DOWN,
-    CAMERA_SELECT,
-    HUD_SELECT,
-    GF_MS_DSPX,
-    GF_MS_DSPY,
-    GF_MS_ROTZ,
-    GF_CT_POSX,
-    GF_CT_POSY,
-    GF_CT_DSPZ,
-    GF_CT_ROTZ,
+
 } Action;
 
 // user friendly descriptions of actions - used in the dialog box
 // (descriptions should not exceed MAX_DESC characters)
 //
 #define ACTION_DESCRIPTIONS {\
-    L"Translate X +", \
-    L"Translate X -", \
-    L"Translate Y +", \
-    L"Translate Y -", \
-    L"Translate Z +", \
-    L"Translate Z -", \
-	L"Roll Boxes",   \
-	L"Spin Left Box",\
-	L"Spin Top Box", \
-    L"Spin Spot Light +", \
-    L"Spin Spot Light -", \
-    L"Clone Right Box", \
-    L"Clone Left Sound", \
-    L"Clone SpotLight", \
-    L"Detach Child Box", \
-    L"Attach Child Box", \
-	L"Pitch Up",     \
-	L"Pitch Down",   \
-	L"Yaw Left",     \
-	L"Yaw Right",    \
-	L"Move Camera Forward",     \
-	L"Move Camera Backward",    \
-    L"Roll Camera Left", \
-    L"Roll Camera Right", \
-    L"Strafe Camera Left", \
-    L"Strafe Camera Right", \
-    L"Strafe Camera Left Alt", \
-    L"Strafe Camera Right Alt", \
-    L"Fly Camera Up", \
-    L"Fly Camera Down", \
-	L"Toggle Background Sound", \
-	L"Explosion Sound", \
+	L"fire cannonball",   \
+	L"Rotate Cannon to the left",   \
+	L"Rotate Cannon to the right",   \
+	L"Rotate Cannon to the back",   \
+	L"Rotate Cannon to the front",   \
+	L"clockwise moment to platform", \
+	L"counterclockwise moment to platform", \
 	L"Increase Volume", \
 	L"Decrease Volume", \
 	L"Speed Up Sound",  \
 	L"Slow Down Sound", \
-	L"Toggle Point Light",   \
-	L"Toggle Spot Light",    \
-	L"Toggle Distant Light", \
-    L"Toggle Cloned Light", \
 	L"Toggle Heads Up Display",      \
 	L"Heads Up Display - Move Left", \
 	L"Heads Up Display - Move Right",\
 	L"Heads Up Display - Move Up",   \
 	L"Heads Up Display - Move Down",  \
-    L"Select Camera", \
-    L"Select HUD", \
-    L"Mouse Displacment X", \
-    L"Mouse Displacment Y", \
-    L"Mouse Rotation Z", \
-    L"Controller Displacement X", \
-    L"Controller Displacement Y", \
-    L"Controller Displacement Z", \
-    L"Controller Displacement X", \
 }
 
 // Model Sounds

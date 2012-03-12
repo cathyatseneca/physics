@@ -61,56 +61,56 @@ void Camera::update() {
         rz = 0;
 
     // controller input
-    int jx = coordinator->change(GF_CT_POSX);
-    int jy = coordinator->change(GF_CT_POSY);
-    int jr = coordinator->change(GF_CT_ROTZ);
-    if (jy)
-        rx = -(int)(jy * CTR_SPEED);
-    if (jr)
-        ry = (int)(jr * CTR_SPEED);
-    if (jx)
-        rz = (int)(jx * CTR_SPEED);
+ //   int jx = coordinator->change(GF_CT_POSX);
+ //   int jy = coordinator->change(GF_CT_POSY);
+ //   int jr = coordinator->change(GF_CT_ROTZ);
+ //   if (jy)
+ //       rx = -(int)(jy * CTR_SPEED);
+ //   if (jr)
+ //       ry = (int)(jr * CTR_SPEED);
+ //   if (jx)
+ //       rz = (int)(jx * CTR_SPEED);
 
-	// mouse input
-    int mx = coordinator->change(GF_MS_DSPX);
-    int my = coordinator->change(GF_MS_DSPY);
-    int mz = coordinator->change(GF_MS_ROTZ);
-	if (mx)
-		ry += mx * MOUSE_SPEED;
-	if (my)
-		rx += my * MOUSE_SPEED;
-	if (mz)
-		dy += mz * MOUSE_SPEED;
-		
-	// keyboard input
-    if (coordinator->pressed(CAM_STRAFE_LEFT))
-        dx -= delta;
-    if (coordinator->pressed(CAM_STRAFE_RIGHT))
-        dx += delta;
-    if (coordinator->pressed(CAM_STRAFE_LEFT_ALT))
-        dx -= delta;
-    if (coordinator->pressed(CAM_STRAFE_RIGHT_ALT))
-        dx += delta;
-    if (coordinator->pressed(CAM_FLY_DOWN))
-        dy -= delta;
-    if (coordinator->pressed(CAM_FLY_UP))
-        dy += delta;
-    if (coordinator->pressed(CAM_ADVANCE))
-        dz += delta;
-    if (coordinator->pressed(CAM_RETREAT))
-        dz -= delta;
-    if (coordinator->pressed(CAM_PITCH_UP))
-        rx -= delta;
-    if (coordinator->pressed(CAM_PITCH_DOWN))
-        rx += delta;
-    if (coordinator->pressed(CAM_YAW_LEFT))
-        ry -= delta;
-    if (coordinator->pressed(CAM_YAW_RIGHT))
-        ry += delta;
-    if (coordinator->pressed(CAM_ROLL_LEFT))
-        rz -= delta;
-    if (coordinator->pressed(CAM_ROLL_RIGHT))
-        rz += delta;
+	//// mouse input
+ //   int mx = coordinator->change(GF_MS_DSPX);
+ //   int my = coordinator->change(GF_MS_DSPY);
+ //   int mz = coordinator->change(GF_MS_ROTZ);
+	//if (mx)
+	//	ry += mx * MOUSE_SPEED;
+	//if (my)
+	//	rx += my * MOUSE_SPEED;
+	//if (mz)
+	//	dy += mz * MOUSE_SPEED;
+	//	
+	//// keyboard input
+ //   if (coordinator->pressed(CAM_STRAFE_LEFT))
+ //       dx -= delta;
+ //   if (coordinator->pressed(CAM_STRAFE_RIGHT))
+ //       dx += delta;
+ //   if (coordinator->pressed(CAM_STRAFE_LEFT_ALT))
+ //       dx -= delta;
+ //   if (coordinator->pressed(CAM_STRAFE_RIGHT_ALT))
+ //       dx += delta;
+ //   if (coordinator->pressed(CAM_FLY_DOWN))
+ //       dy -= delta;
+ //   if (coordinator->pressed(CAM_FLY_UP))
+ //       dy += delta;
+ //   if (coordinator->pressed(CAM_ADVANCE))
+ //       dz += delta;
+ //   if (coordinator->pressed(CAM_RETREAT))
+ //       dz -= delta;
+ //   if (coordinator->pressed(CAM_PITCH_UP))
+ //       rx -= delta;
+ //   if (coordinator->pressed(CAM_PITCH_DOWN))
+ //       rx += delta;
+ //   if (coordinator->pressed(CAM_YAW_LEFT))
+ //       ry -= delta;
+ //   if (coordinator->pressed(CAM_YAW_RIGHT))
+ //       ry += delta;
+ //   if (coordinator->pressed(CAM_ROLL_LEFT))
+ //       rz -= delta;
+ //   if (coordinator->pressed(CAM_ROLL_RIGHT))
+ //       rz += delta;
 
     // adjust camera orientation
 	if ((rx || ry || rz)) {

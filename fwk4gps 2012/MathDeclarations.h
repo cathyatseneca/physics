@@ -29,6 +29,8 @@ struct Vector {
     Vector  operator-();
     Vector& operator+=(const Vector& a);
     Vector& operator-=(const Vector& a);
+	Vector operator*(const Vector& v);
+
     Vector  operator*(const Matrix& m);
     Vector  operator*(const Matrix& m) const;
     Vector  operator*=(const Matrix& m);

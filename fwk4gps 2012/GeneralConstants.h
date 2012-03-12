@@ -42,4 +42,10 @@
 #define WND_WIDTH  800   // minimum window width
 #define WND_HEIGHT 600   // minimum window height
 
+// absolute minimum for body mass, inertia values
+#define MIN_MASS 1.0e-10f
+#define MIN_DIST 1.0e-10f
+#define RECIP(x) (((x) < MIN_DIST) ? 1.f / MIN_DIST : 1.f / (x))
+#define MAX_COLLISION_TOLERANCE 1.0e-6f
+#define UNITS_PER_SEC 1000.0F
 #endif

@@ -480,5 +480,8 @@ inline Matrix orthoNormalize(const Matrix& m){
 			    m.m41,m.m42,m.m43,m.m44);
 
 }
+inline Vector Vector::operator*(const Vector& v){
+    return Vector(x*v.x, y*v.y, z*v.z);
+}
 
 #endif

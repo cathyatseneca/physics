@@ -122,13 +122,13 @@ APIUserInput::APIUserInput(const wchar_t* a) : audioDirectory(a) {
         action[i][CONTROLLER] = 0;
     }
     // populate pointer-object action translation list
-    Action ptrAct[] = PTR_OBJ_ACTION_MAP;
-    for (unsigned i = 0; i < nPtrObjs; i++)
-        action[ptrAct[i]][POINTER] = i + 1;
+    //Action ptrAct[] = PTR_OBJ_ACTION_MAP;
+    //for (unsigned i = 0; i < nPtrObjs; i++)
+    //    action[ptrAct[i]][POINTER] = i + 1;
     // populate controller-object action translation list
-    Action ctrAct[] = CTR_OBJ_ACTION_MAP;
-    for (unsigned i = 0; i < nCtrObjs; i++)
-        action[ctrAct[i]][CONTROLLER] = i + 1;
+    //Action ctrAct[] = CTR_OBJ_ACTION_MAP;
+    //for (unsigned i = 0; i < nCtrObjs; i++)
+    //    action[ctrAct[i]][CONTROLLER] = i + 1;
 
     // allocate memory for sound descriptions and initial sound mappings
 	const wchar_t* soundDesc[] = SOUND_DESCRIPTIONS;

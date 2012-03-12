@@ -16,6 +16,10 @@
 //
 Frame::Frame() : T(1), parent(0) { }
 
+//returns this object's position relative to the parent
+Vector Frame::relativePosition(){
+	return ::position(T);
+}
 // position returns the Frame's position vector in world space
 //
 // Note that this method constructs the vector recursively

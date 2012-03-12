@@ -42,6 +42,7 @@ class iFrame {
 
 	//added for phyics
 	// rotate rotates the Frame using rotation matrix rot
+	virtual Vector relativePosition()					= 0;
 	virtual void rotate(const Matrix& rot)                      = 0;
 };
 

@@ -13,17 +13,9 @@
 
 // initial mappings of actions to keys
 //
-#define ACTION_KEY_MAP {KEY_4, KEY_5, KEY_6, KEY_7, KEY_8, KEY_9, \
-    KEY_R, KEY_T, KEY_Y, KEY_SEMICOLON, \
-    KEY_BACKSLASH, KEY_U, KEY_I, KEY_O, KEY_P, KEY_V, \
-    KEY_PGUP, KEY_PGDN, KEY_Z, KEY_C, KEY_W, KEY_S, KEY_Q, KEY_E, \
-    KEY_A, KEY_D, KEY_LEFT, KEY_RIGHT, KEY_UP, KEY_DOWN, \
-	KEY_F3, KEY_F4, KEY_F6, KEY_F7, KEY_W, KEY_S, \
-    KEY_J, KEY_K, KEY_L, KEY_H, \
-    KEY_F, KEY_V,   \
-	KEY_B, KEY_N, KEY_M, \
-    KEY_X, KEY_1, \
-    KEY_1, KEY_1, KEY_1, KEY_1, KEY_1, KEY_1, KEY_1 \
+#define ACTION_KEY_MAP {KEY_SPACE,KEY_A,KEY_D,KEY_S,KEY_W,\
+KEY_Q,KEY_E,\
+KEY_F3,KEY_F4,KEY_F5,KEY_F6,KEY_F1,KEY_F2,KEY_F7,KEY_F8,KEY_F9\
 }
 
 // initial mappings of pointer objects to actions

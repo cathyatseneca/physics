@@ -34,6 +34,7 @@ class Frame : public iFrame {
     void   orient(const Matrix& rot)             { T.orient(rot); }
     Vector position() const;
     Matrix rotation() const;
+	Vector relativePosition();
 	Vector orientation(const Vector& v) const;
 	Vector orientation(char c) const;
     Matrix world() const;

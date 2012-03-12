@@ -26,7 +26,7 @@
 #include "MathDefinitions.h" // for ::projection
 #include "Common_Symbols.h"  // for Action and Sound enumerations
 #define FPS_MAX 200
-#define UNITS_PER_SEC 1000
+
 
 //-------------------------------- Coordinator --------------------------------
 //
@@ -227,42 +227,42 @@ void Coordinator::adjustFrequency(int factor) {
 void Coordinator::update() {
 
 	// toggle and update the current camera
-	if (camera.size() && userInput->pressed(CAMERA_SELECT) && 
-        now - lastCameraToggle > KEY_LATENCY) {
-        lastCameraToggle = now;
-        currentCam++;
-        if (currentCam == camera.size())
-            currentCam = 0;
-    }
+	//if (camera.size() && userInput->pressed(CAMERA_SELECT) && 
+ //       now - lastCameraToggle > KEY_LATENCY) {
+ //       lastCameraToggle = now;
+ //       currentCam++;
+ //       if (currentCam == camera.size())
+ //           currentCam = 0;
+ //   }
     if (camera.size() && camera[currentCam])
-        camera[currentCam]->update();
+       camera[currentCam]->update();
 
-	// toggle and update the current hud
-	if (hud.size() && userInput->pressed(HUD_SELECT) &&
-        now - lastHUDToggle > KEY_LATENCY) {
-        lastHUDToggle = now;
-        currentHUD++;
-        if (currentHUD == hud.size())
-            currentHUD = 0;
-    }
-    if (hud.size() && hud[currentHUD] && userInput->pressed(HUD_DISPLAY))
-        hud[currentHUD]->toggle();
-    if (hud.size() && hud[currentHUD]) 
-        hud[currentHUD]->update();
+	//// toggle and update the current hud
+	//if (hud.size() && userInput->pressed(HUD_SELECT) &&
+ //       now - lastHUDToggle > KEY_LATENCY) {
+ //       lastHUDToggle = now;
+ //       currentHUD++;
+ //       if (currentHUD == hud.size())
+ //           currentHUD = 0;
+ //   }
+ //   if (hud.size() && hud[currentHUD] && userInput->pressed(HUD_DISPLAY))
+ //       hud[currentHUD]->toggle();
+ //   if (hud.size() && hud[currentHUD]) 
+ //       hud[currentHUD]->update();
 
-    // update the volume and the frequency
-	if (now - lastUpdate > KEY_LATENCY) {
+ //   // update the volume and the frequency
+	//if (now - lastUpdate > KEY_LATENCY) {
 
-		if (userInput->pressed(AUD_VOLUME_DEC))
-			adjustVolume(-1);
-		if (userInput->pressed(AUD_VOLUME_INC))
-			adjustVolume(1);
+	//	if (userInput->pressed(AUD_VOLUME_DEC))
+	//		adjustVolume(-1);
+	//	if (userInput->pressed(AUD_VOLUME_INC))
+	//		adjustVolume(1);
 
-        if (userInput->pressed(AUD_FREQ_DEC))
-            adjustFrequency(-1);
-        else if (userInput->pressed(AUD_FREQ_INC))
-            adjustFrequency(1);
-	}	
+ //       if (userInput->pressed(AUD_FREQ_DEC))
+ //           adjustFrequency(-1);
+ //       else if (userInput->pressed(AUD_FREQ_INC))
+ //           adjustFrequency(1);
+	//}	
 
     // update the sound sources
     for (unsigned i = 0; i < sound.size(); i++)
