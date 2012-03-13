@@ -33,7 +33,7 @@ public:
     virtual void remove(iCollisionGeometry* o)          = 0;
     virtual const std::list<iCollisionGeometry*>& getAttachedGeometry() = 0;
     virtual void populateContactList(float delta)       = 0;
-    virtual const CollisionContact* getContactList() const  = 0;
+    virtual const CollisionContact* getContactList(int idx) const  = 0;
     virtual size_t getNumContacts() const               = 0;
     // termination functions
     virtual void suspend() const                        = 0;

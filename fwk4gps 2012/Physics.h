@@ -34,7 +34,7 @@ class Physics:public iPhysics{
 	void	setAcceleration(Vector v)				{acceleration_=v;}
 
 public:
-	Physics(float mass, iObject* bv);
+    Physics(float mass, PhysicsType pt, iObject* bv);
 	~Physics();
 
 	void   scale(float x, float y, float z){bv_->scale(x,y,z);}
@@ -73,7 +73,7 @@ public:
 	void setCollision(iCollisionGeometry* cg){cg_=cg;}
 	iCollisionGeometry* collisionGeometry(){return cg_;}
 	friend iPhysics* CreatePhysicsBox(float minx, float miny, float minz, 
-	 float maxx, float maxy, float maxz, const Reflectivity* r, float mass,bool hasCollision);
+	 float maxx, float maxy, float maxz, const Reflectivity* r, float mass,PhysicsType pt,bool hasCollision);
 };
 //extern "C"
 //iPhysics* CreatePhysicsBox(float minx, float miny, float minz, 

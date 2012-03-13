@@ -158,12 +158,12 @@ void SimpleCollisionSpace::populateContactList(float delta){
 /**
  * getContactList
  *
- * Returns a pointer to the first contact structure in the contact list.
+ * Returns a pointer to the idx'th structure in the contact list.
  * Contact normals face toward g2.
  */
-const CollisionContact* SimpleCollisionSpace::getContactList() const{
-    if (_geomList.size() && _contactList.size()) {
-        return &(_contactList[0]);
+const CollisionContact* SimpleCollisionSpace::getContactList(int idx) const{
+    if (_geomList.size() && (idx < _contactList.size())) {
+        return &(_contactList[idx]);
     } else {
         return NULL;
     }

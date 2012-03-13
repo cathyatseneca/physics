@@ -59,6 +59,6 @@ public:
 };
 extern "C"
 iPhysics* CreatePhysicsBox(float minx, float miny, float minz, 
-  float maxx, float maxy, float maxz, const Reflectivity* r, float mass, bool hasCollision=false);
+  float maxx, float maxy, float maxz, const Reflectivity* r, float mass, PhysicsType pt, bool hasCollision=false);
 
 #endif

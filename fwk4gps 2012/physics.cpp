@@ -4,12 +4,13 @@
 #include "CollisionGeometry.h"
 #include "COBB.h"
 #include "CSphere.h"
-Physics::Physics(float mass, iObject* bv){
+Physics::Physics(float mass, PhysicsType pt, iObject* bv){
 	mass_=mass>MIN_MASS?mass:MIN_MASS;
 	bv_=bv;
 	parent_=0;
 	momentInertia_=Matrix(mass);   //assuming point
 	invMomentInertia_=Matrix(1/mass);
+	physicsType_=pt;
 }
 void Physics::attachTo(iPhysics* newParent, float speed, float angularSpeed) {
 
@@ -28,8 +29,10 @@ void Physics::attachTo(iPhysics* newParent, float speed, float angularSpeed) {
 	if(newParent){
  		bv_->attachTo(newParent->bv());
 	}
-	else
+	else{
 		bv_->attachTo(0);
+		physicsType_=PHYS_Falling;
+	}
 }
 // angAcceleration returns the angular acceleration of the frame in world
 // space.
@@ -122,7 +125,7 @@ void Physics::setMomentInertia(const Vector& mi){
 
 
 iPhysics* Physics::clone(){
-	Physics* rc= new Physics(mass_, (iObject*)bv_->clone());
+	Physics* rc= new Physics(mass_,physicsType_, (iObject*)bv_->clone());
 	rc->parent_=parent_;
 	rc->velocity_=velocity_;       
 	rc->acceleration_=acceleration_;   
@@ -141,11 +144,11 @@ Physics::~Physics(){
 }
 
 iPhysics* CreatePhysicsBox(float minx, float miny, float minz, 
-	 float maxx, float maxy, float maxz, const Reflectivity* r, float mass,bool hasCollision){
+	 float maxx, float maxy, float maxz, const Reflectivity* r, float mass,PhysicsType pt, bool hasCollision){
 
 	iGraphic* box=CreateBox(minx,miny,minz*MODEL_Z_AXIS,maxx,maxy,maxz*MODEL_Z_AXIS);		 
-  	 Physics* rc= new Physics(mass,CreateObject(box,r));
-
+  	Physics* rc= new Physics(mass,pt,CreateObject(box,r));
+	
 	float xsq=maxx-minx;
 	float ysq=maxy-miny;
 	float zsq=maxz-minz;

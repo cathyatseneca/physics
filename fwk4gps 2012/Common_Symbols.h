@@ -135,7 +135,7 @@ typedef enum ModelSound {
 #define TEXT_CLEARTYPE 16384
 #define TEXT_EXTRA     32768
 #define TEXT_DEFAULT TEXT_LEFT | TEXT_TOP | TEXT_NORMAL 
-#define TEXT_HEIGHT       15
+#define TEXT_HEIGHT       12
 #define TEXT_TYPEFACE L"ARIAL"
 // font colour [0,255]
 #define TEXT_R 0

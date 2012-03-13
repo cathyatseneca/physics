@@ -43,7 +43,7 @@ public:
     void remove(iCollisionGeometry* o);
     const std::list<iCollisionGeometry*>& getAttachedGeometry();
     void populateContactList(float delta);
-    const CollisionContact* getContactList() const;
+    const CollisionContact* getContactList(int idx=0) const;
     size_t getNumContacts() const;
     // termination functions
     void suspend() const;
